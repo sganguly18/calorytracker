@@ -1,0 +1,16 @@
+<mat-card style="min-height: 300px;">
+    <mat-card-title>Daily Exercise List</mat-card-title>
+    <mat-card-content>
+        <mat-list *ngFor="let entry of exerciseList; let i = index">
+            <mat-list-item>
+                {{ i + 1 }}. Description: {{ entry.desc }} &nbsp;&nbsp;&nbsp; duration: {{ entry.duration }}&nbsp;&nbsp;&nbsp;
+                repetition : {{ entry.repetition}}&nbsp;&nbsp;&nbsp;
+                date : {{ entry.date}}
+                &nbsp;&nbsp;&nbsp; Category: {{ entry.category_id }}
+                <button class="delete_button" mat-icon-button color="warn" (click)="fbService.delete(entry._id)">
+                    <mat-icon>delete</mat-icon>
+                </button>
+            </mat-list-item>
+        </mat-list>
+    </mat-card-content>
+</mat-card>

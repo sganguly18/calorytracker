@@ -1,0 +1,39 @@
+<mat-card>
+    <mat-card-title>Exercise Manager</mat-card-title>
+    <mat-card-content>
+        <h2>New Exercise</h2>
+        <mat-form-field appearance="outline" style="margin-right: 10px;">
+            <mat-label>Exercise Name</mat-label>
+            <input matInput [(ngModel)] = "ename">
+        </mat-form-field>
+        <mat-form-field appearance="outline" style="margin-right: 10px;">
+            <mat-label>Category</mat-label>
+            <input matInput [(ngModel)] = "ecat">
+        </mat-form-field>
+        <mat-form-field appearance="outline" style="margin-right: 10px;">
+            <mat-label>duration</mat-label>
+            <input matInput [(ngModel)] = "eduration">
+        </mat-form-field>
+        <mat-form-field appearance="outline" style="margin-right: 10px;">
+            <mat-label>repetition</mat-label>
+            <input matInput [(ngModel)] = "erepetition">
+        </mat-form-field>
+        <mat-form-field appearance="outline" style="margin-right: 10px;">
+            <mat-label>Date</mat-label>
+            <input matInput [(ngModel)] = "edate">
+        </mat-form-field>
+        <button mat-raised-button color="primary" (click)="addExercise()">SUBMIT</button>
+    </mat-card-content>
+    <mat-card-content>
+        <h2>New Category</h2>
+        <mat-form-field appearance="outline" style="margin-right: 10px;">
+            <mat-label>Category Name</mat-label>
+            <input matInput [(ngModel)] = "cname">
+        </mat-form-field>
+        <mat-form-field appearance="outline" style="margin-right: 10px;">
+            <mat-label>Threshold</mat-label>
+            <input matInput [(ngModel)] = "cthreshold">
+        </mat-form-field>
+        <button mat-raised-button color="primary" (click)="addCategory()">SUBMIT</button>
+    </mat-card-content>
+</mat-card>
